@@ -11,15 +11,15 @@ REINFORCE is a straightforward policy gradient method that works as follows:
 - **Computing Returns**: For each time step in the trajectory, the algorithm computes the discounted cumulative reward (return), which estimates the future reward.
 - **Policy Update**: The policy parameters are updated by moving in the direction of the gradient of the expected reward. The update rule is given by:
 
-  \[
-  \theta \leftarrow \theta + \alpha \nabla_\theta \log \pi(a|s;\theta) G_t
-  \]
-
+```math
+\theta \leftarrow \theta + \alpha \nabla_\theta \log \pi(a|s;\theta) G_t
+```
   where:
-  - \( \theta \) are the parameters of the policy,
-  - \( \alpha \) is the learning rate,
-  - \( \pi(a|s;\theta) \) is the probability of taking action \( a \) in state \( s \),
-  - \( G_t \) is the discounted return from time \( t \) onward.
+  - $$\( \theta \)$$ are the parameters of the policy,
+  - $$\( \alpha \)$$ is the learning rate,
+  - $$\( \pi(a|s;\theta) \)$$ is the probability of taking action $$\( a \)$$ in state $$\( s \)$$,
+  - $$\( G_t \)$$ is the discounted return from time $$\( t \)$$ onward.
+
 
 This method encourages actions that lead to higher rewards while discouraging those with lower returns.
 
